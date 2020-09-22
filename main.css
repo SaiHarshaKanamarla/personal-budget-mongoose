@@ -129,6 +129,23 @@ nav ul li a {
     margin: 0;
 }
 
+nav button{
+    background-color: #4d5791;
+    padding: 0 20px;
+    background: transparent;
+    border-style: solid;
+    border-color:#4d5791;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4em;
+    height:44px;
+    
+}
+nav button:hover{
+    background-color: white;
+    color: #4d5791;
+}
+
 nav ul li a:hover  {
     background-color: white;
     color: #4d5791;

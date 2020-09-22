@@ -24,8 +24,9 @@
     <!-- This is a Semantic HTML Change where we use a native nav tag for navigation bar -->
     <nav>
         <ul>
-            <li><a href="./index.html">HomePage</a></li>
-            <!-- This is an A11y Change where we can skip the tab activity on "about" and "login" tabs because they are not implemented yet -->
+            <!-- his is an A11y Change where the header element is essentially a button and hence we are setting the property as the same -->
+            <li><button href="./index.html">HomePage</button><!--<a href="./index.html">HomePage</a>--></li>
+            <!-- This is an A11y Change where we can skip the tab activity on "about" and "login" tabs because they are not fully implemented yet -->            
             <li><a href="./about.html" tabindex=-1>About</a></li>
             <li><a href="./login.html" tabindex=-1>Login</a></li>
             <!-- This is an SEO change where we add a rel=dofollow to ensure the site's reputation before we navigate to third party websites. Providing credibility to the third party links improves page ranking--> 
