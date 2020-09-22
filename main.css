@@ -149,3 +149,19 @@ nav ul li a:hover  {
         margin: 10px;
     }
 }
+
+/* CSS for skip to content button*/
+
+a#skip, a#skip:hover, a#skip:visited{
+    position:absolute;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    top:-500px;
+}
+
+a#skip:focus{
+    position:static;
+    width:auto;
+    height:auto;
+}
