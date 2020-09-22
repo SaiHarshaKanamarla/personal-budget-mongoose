@@ -134,6 +134,8 @@ nav ul li a:hover  {
     color: #4d5791;
 }
 
+/* CSS for the article semantic tag that is enclosed in a container */
+
 .container article {
     display: inline-block;
     width: 100%;
