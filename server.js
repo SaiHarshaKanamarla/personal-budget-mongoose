@@ -1,4 +1,3 @@
-
 const express = require('express');
 const app = express();
 
@@ -6,31 +5,15 @@ const port = 3000;
 
 app.use('',express.static('public'));
 
-const budget = {
-    myBudget : [
-    {
-        title:'Eat out',
-        budget : 35
-    },
-    {
-        title:'Rent',
-        budget : 375
-    },
-    {
-        title:'Groceries',
-        budget : 110
-    }
-    
-]}
 
 app.get('/hello',(req,res)=>{
     res.send("sample text");    
 });
 
-
+var sampleData = require('./sampleData.json');
 app.get('/budget',(req,res)=>{
-    res.json(budget);
-    console.log(budget.myBudget[0].title);
+    console.log(sampleData);
+    res.json(sampleData);    
 })
 
 app.listen(port,()=>{
