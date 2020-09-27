@@ -2,11 +2,15 @@
     "myBudget" : [
     {
         "title":"Eat out",
-        "budget" : 35
+        "budget" : 80
     },
     {
         "title":"Rent",
         "budget" : 375
+    },    
+    {
+        "title":"Miscellaneous",
+        "budget" : 300
     },
     {
         "title":"Groceries",
@@ -18,15 +22,11 @@
     },
     {
         "title":"Fuel",
-        "budget" : 50
+        "budget" : 200
     },
     {
         "title":"Savings",
         "budget" : 1000
-    },
-    {
-        "title":"Miscellaneous",
-        "budget" : 200
     }
     
 ]
