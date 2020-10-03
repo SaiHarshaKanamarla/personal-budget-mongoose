@@ -6,7 +6,7 @@
     },
     {
         "title":"Rent",
-        "budget" : 375
+        "budget" : 400
     },    
     {
         "title":"Miscellaneous",
@@ -27,6 +27,10 @@
     {
         "title":"Savings",
         "budget" : 1000
+    },
+    {
+        "title" : "Travel",
+        "budget" : 500
     }
     
 ]

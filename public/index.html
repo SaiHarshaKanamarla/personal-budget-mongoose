@@ -124,7 +124,9 @@
                 '#6E453C',
                 '#23rvfs',
                 '#6324EA',
-                '#A9256B'
+                '#A9256B',
+                '#0BF0E8',
+                '#F0FF00'
             ]
         }],
 
@@ -149,8 +151,8 @@
                 dataSource.datasets[0].data[i] = res.data.myBudget[i].budget;
                 dataSource.labels[i] = res.data.myBudget[i].title;
             }
-            createChart();
             change(randomData());
+            createChart();            
         })
     }        
     getBudget();    
@@ -176,8 +178,7 @@ var width = 960,
 
 var pie = d3.layout.pie()
 	.sort(null)
-	.value(function(d) {
-        console.log(JSON.stringify(d));
+	.value(function(d) {        
 		return d.value;
 	});
 
@@ -198,7 +199,7 @@ var color = d3.scale.ordinal()
 
 function randomData (){
     var labels =  dataSource.labels;
-    var values = dataSource.datasets[0].data;
+    var values = dataSource.datasets[0].data;    
 	return labels.map(function(label,value){
 		return { label: label, value: value }
 	});
@@ -207,13 +208,15 @@ function randomData (){
 
 function change(data) {
 
-	/* ------- PIE SLICES -------*/
+    /* ------- PIE SLICES -------*/
+    console.log(data);
 	var slice = svg.select(".slices").selectAll("path.slice")
 		.data(pie(data), key);
 
 	slice.enter()
 		.insert("path")
-		.style("fill", function(d) { return color(d.data.label); })
+		.style("fill", function(d) {             
+            return color(d.data.label); })
 		.attr("class", "slice");
 
 	slice		
