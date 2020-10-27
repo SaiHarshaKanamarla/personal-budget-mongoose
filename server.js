@@ -13,7 +13,7 @@ app.get('/hello',(req,res)=>{
     res.send("sample text");    
 });
 
-var sampleData = require('./sampleData.json');
+//var sampleData = require('./sampleData.json');
 app.get('/budget',(req,res)=>{
     //console.log(sampleData);
     //res.json(sampleData);    
