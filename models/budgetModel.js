@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const budgetSchema = mongoose.Schema({
     _id:{
         type: String,
-        required : true,
+        required : false,
         trim : true
     },
     title :{
