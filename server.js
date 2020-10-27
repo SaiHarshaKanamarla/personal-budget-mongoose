@@ -53,12 +53,13 @@ app.post('/budget',(req,res)=>{
     mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true})
             .then(()=>{
                 console.log("Connection to the database is established");
-                budgetModel.insertMany(data,(err,res)=>{
+                budgetModel.insertMany(data,(err,data)=>{
                     if(err){
                         console.log(err);                        
                     }else{
-                        console.log("insert successful");     
-                        mongoose.connection.close();
+                        console.log("insert successful"); 
+                        res.send(data);    
+                        mongoose.disconnect();
                     }                    
                 })                              
 })
