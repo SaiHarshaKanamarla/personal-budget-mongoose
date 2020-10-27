@@ -118,15 +118,7 @@
         datasets: [{
             data: [],
             backgroundColor : [
-                '#ffcd56',
-                '#ff6384',
-                '#40E82F',
-                '#6E453C',
-                '#23rvfs',
-                '#6324EA',
-                '#A9256B',
-                '#0BF0E8',
-                '#F0FF00'
+                
             ]
         }],
 
@@ -151,6 +143,7 @@
             for(var i=0;i<res.data.length;i++){
                 dataSource.datasets[0].data[i] = res.data[i].budget;
                 dataSource.labels[i] = res.data[i].title;
+                dataSource.datasets[0].backgroundColor[i] = res.data[i].color;
             }
             change(randomData());
             createChart();            

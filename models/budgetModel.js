@@ -15,6 +15,11 @@ const budgetSchema = mongoose.Schema({
     budget :{
         type : Number,
         required : true,        
+    },
+    color:{
+        type: String,
+        required: true,
+        match: [/^#(?:[0-9a-fA-F]{3}){1,2}$/, 'Invalid Color']
     }
 },{collection : 'budget'})
 

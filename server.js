@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 const mongoose  = require('mongoose');
 const cors = require('cors');
 const budgetModel = require('./models/budgetModel');
 const port = 3000;
+
+app.use(bodyParser.urlencoded({ extended: false }));
 
 var url = 'mongodb://localhost:27017/budget-data';
 app.use('',express.static('public'));
@@ -39,6 +42,9 @@ app.get('/budget',(req,res)=>{
                            })
             })
 })
+
+
+
 
 app.listen(port,()=>{
     console.log("App is running on port "+port);
