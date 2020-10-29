@@ -55,7 +55,9 @@ app.post('/budget',(req,res)=>{
                 console.log("Connection to the database is established");
                 budgetModel.insertMany(data,(err,data)=>{
                     if(err){
-                        console.log(err);                        
+                        console.log(err);      
+                        res.send(err);
+                        mongoose.connection.close();
                     }else{
                         console.log("insert successful"); 
                         res.send(data);    
