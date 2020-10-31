@@ -5,7 +5,8 @@ const budgetSchema = mongoose.Schema({
     _id:{
         type: String,
         required : false,
-        trim : true
+        trim : true,
+        unique: true
     },
     title :{
         type: String,
